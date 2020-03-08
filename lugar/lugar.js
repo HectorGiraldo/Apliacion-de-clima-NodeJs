@@ -5,7 +5,7 @@ const getLugarLatLng = async(direccion) => {
 
     let encodedUrl = encodeURI(direccion);
 
-    let resp = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodedUrl}&key=AIzaSyCbv3hWs6m7WnlWwZdyWPGnkgwJSWb83Qw`)
+    let resp = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodedUrl}&key=API-KEY`)
 
     if (resp.data.status === 'ZERO_RESULTS') {
         throw new Error(`No hay resultados para la ciudad ${direccion}`);
